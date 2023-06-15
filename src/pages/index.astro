@@ -1,15 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Sismos from '../components/Sismos.jsx';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<nav class="bg-slate-800 p-12 rounded-b-2xl flex justify-between align-middle">
-			<h1 class="text-center text-slate-200 font-bold text-3xl">Hello World</h1>
+		<nav class="bg-slate-800 p-12 rounded-b-2xl flex justify-between items-center">
+			<h1 class="text-center text-slate-200 font-bold text-3xl">Sismologia Tailwind</h1>
 			<div class="text-slate-200 flex align-middle justify-between">
-				<p class="pe-3">Otra cosa</p>
-				<p class="">Sismos cargados: 0</p>
+				<p class="pe-3">/Nandem1</p>
 			</div>
 		</nav>
+		<section>
+			<h1 class="text-slate-600 text-3xl ps-2 pt-3 font-semibold">Sismos recientes: </h1>
+			<Sismos client:load/>
+		</section>
 	</main>
 </Layout>
